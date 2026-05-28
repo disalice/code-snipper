@@ -1,0 +1,11 @@
+{
+  "target_dir": "../../",
+  "includes": [
+  ],  
+  "excludes": [
+    "output"
+  ],
+  "output_file_name": "sample_all_context.md",
+  "enable_tree": true,
+  "max_excluded_depth": 2
+}

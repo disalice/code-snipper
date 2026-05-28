@@ -1,0 +1,21 @@
+services:
+  generator:
+    build: .
+    image: snippet-generator:latest
+    volumes:
+      - .:/app
+      - ${TARGET_DIR:-.}:/src
+      - ../output:/app/output
+    environment:
+      - PYTHONUNBUFFERED=1
+      - HOST_PWD=${HOST_PWD:-.}
+      - HOST_TARGET_DIR=${TARGET_DIR:-.}
+
+  formatter:
+    image: snippet-generator:latest
+    volumes:
+      - .:/app
+    entrypoint: [
+      "sh", "-c",
+      "ruff check --select I --fix /app && ruff format /app"
+    ]

@@ -1,0 +1,14 @@
+{
+  "target_dir": "../../",
+  "entry_file": "core/generate_ast_snippets.py",
+  "entry_point_name": "run",
+  "includes": [
+    "core/base_generator.py"
+  ],
+  "excludes": [
+    "output"
+  ],
+  "output_file_name": "sample_ast_context.md",
+  "enable_tree": false,
+  "max_excluded_depth": 1
+}
